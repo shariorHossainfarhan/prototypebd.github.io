@@ -1,103 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Prototypebd</title>
-</head>
-<body>
-    
-    <div class="login-box">
-        <div class="logo">
-            <img src="Logo_Fb_Final.png" alt="PDB" >
-        </div>
-        
-
-        <h2>PrototypeBD Order Form</h2>
-        <form id="form">
-           
-
-          <div class="user-box">
-            <input type="text" name="Name" required="">
-            <label>Name</label>
-          </div>
-          <div class="user-box">
-            <input type="text" name="Address" required="">
-            <label>Address</label>
-          </div>
-
-          <div class="user-box">
-            <input type="text" name="City" required="">
-            <label>City</label>
-          </div>
-          <div class="user-box">
-            <input type="text" name="Zip" required="">
-            <label>Zip</label>
-          </div>
-
-          <div class="user-box">
-            <input type="text" name="Phone" required="">
-            <label>Phone</label>
-          </div>
-
-          <div class="user-box">
-            <input type="text" name="Company" required="">
-            <label>Company Name(if any)</label>
-          </div>
-
-          <a href="#" id="anchor">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Submit
-          </a>
-        </form>
-      </div>
-
-
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyBmSTAptfjiF2O_NQ6Xfcie94HpVUlIH00",
-    authDomain: "test-93e87.firebaseapp.com",
-    databaseURL: "https://test-93e87-default-rtdb.firebaseio.com",
-    projectId: "test-93e87",
-    storageBucket: "test-93e87.appspot.com",
-    messagingSenderId: "681521298704",
-    appId: "1:681521298704:web:0a47d0740a0029b5c3b995",
-    measurementId: "G-M4M063KM9C"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-  const db =firebase.firestore();
-  db.settings({timestampsInSnapshots:true});
-</script>
-
-
-
-
-
-
-
-
-
-
-
-<script src="myscript.js"></script>
-
-</body>
-</html>
+anchor.addEventListener('click',(e)=>{
+    console.log(155);
+    e.preventDefault();
+   if(form.name.value!==''){  
+    console.log(15);
+        db.collection('order').add({
+            Name:form.Name.value,
+            Address:form.Address.value,
+            City:form.City.value,
+            Zip:form.Zip.value,
+            Phone:form.Phone.value,
+            Company:form.Company.value
+        });
+        form.name.value='';
+       // window.setTimeout(location.reload(),1000);
+       console.log(155);
+       setTimeout("location.reload(true);", 1000);
+    }
+   
+})
