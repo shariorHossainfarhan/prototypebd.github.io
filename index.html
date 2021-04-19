@@ -58,33 +58,28 @@
       </div>
 
 
-
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
 <script>
   // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyANLS5_tL_HsUsJYuEgYeSgXj1PwojpNCY",
-  authDomain: "proto-3c42f.firebaseapp.com",
-  databaseURL: "https://proto-3c42f-default-rtdb.firebaseio.com",
-  projectId: "proto-3c42f",
-  storageBucket: "proto-3c42f.appspot.com",
-  messagingSenderId: "84842885660",
-  appId: "1:84842885660:web:37d1cf269fac5566b365d9",
-  measurementId: "G-YMQ8ENFTGZ"
-};
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBmSTAptfjiF2O_NQ6Xfcie94HpVUlIH00",
+    authDomain: "test-93e87.firebaseapp.com",
+    projectId: "test-93e87",
+    storageBucket: "test-93e87.appspot.com",
+    messagingSenderId: "681521298704",
+    appId: "1:681521298704:web:0a47d0740a0029b5c3b995",
+    measurementId: "G-M4M063KM9C"
+  };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-
-  const db =firebase.firestore();
-  db.settings({timestampsInSnapshots:true});
 </script>
 
 
