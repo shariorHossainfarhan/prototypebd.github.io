@@ -3,7 +3,7 @@ anchor.addEventListener('click',(e)=>{
     e.preventDefault();
    if(form.name.value!==''){  
     console.log(15);
-        firebase.database().ref("User").set({ 
+        db.collection('order').add({
             Name:form.Name.value,
             Address:form.Address.value,
             City:form.City.value,
